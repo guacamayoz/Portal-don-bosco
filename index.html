@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--Comienzo del Header-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <!--Titulo de la pagina-->
+    <title>PORTAL DON BOSCO</title>
+    <!--Logo de la pagina, generalmente esto solo lo veran los usuarios de pc-->
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <!-- Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+</head>
+<!--Fin del Header-->
+<!--Comienzo del Body-->
+<body id="intro" class="overflow-auto">
+        <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="container">
+                <div class="row justify-content-center">  
+                    <!--logo del colegio en pantalla chica-->      
+                    <div class="logo-img text-center d-lg-none col-5 col-sm-4 col-md-4 m-5">
+                        <img class="logo img-fluid" src="img/Logo.png">
+                    </div>
+                    <!--logo del colegio en pantalla grande-->      
+                    <div class="logo-img text-center d-none d-lg-block col-lg-4 col-xl-5 pt-5 pb-2">
+                        <img class="logo img-fluid" src="img/Logo.png">
+                    </div>
+                    <!--Contenedor del formulario-->
+                    <div class="col-xl-5 col-md-8 mb-5">
+
+                <div class="oper-section-outer">
+                    <div class="oper-section-inner">
+                <form class="bg-white rounded shadow-5-strong p-5">
+                        <div>
+
+                            <header class="text-center mb-3 colorTexto ">
+                              <h1 class="weightTexto">DON BOSCO</h1>
+                              <h3 class="text-nowrap">CASA SALESIANA <br> CONGRESO</h3>
+                            </header>
+                        </div>
+                        <div class="text-center text-dark mb-3 ">
+                          <h6>RED PARA ALUMNOS</h6>
+                        </div>
+                <!-- Comienzo de botones, es importante no modificarlo, si falta una funcion, el controlador no detecta la posicion de los botones-->
+                        <div class="text-center">
+                            <span id="oper-hint" style="color: red"></span>
+                        </div>
+                        <div id="hotspot-section" class="d-none">
+                            <select id="hotspot-selector" class="oper-section-item"></select>
+                        </div>
+                        <form id="login-form">
+                            <div id="input-voucher" class="d-none">
+                                <input id="voucherCode" class="oper-section-item input" name="voucherCode" type="text" placeholder="Voucher Code"/>
+                            </div>
+                            <div id="input-user" class="d-none">
+                                <input id="username" class="oper-section-item input" name="username" type="text" placeholder="Username"/>
+                            </div>
+                            <div id="input-password" class="user-input d-none">
+                                <input id="password" class="oper-section-item input" name="password" type="password"  placeholder="Password"/>
+                            </div>
+            <!--Input-simple es el password que necesitamos en el colegio-->
+                            <div id="input-simple" class="form-outline m-3">
+                                <input id="simplePassword" class="password oper-section-item w-100 p-3 form-control" name="simplePassword" type="password"/>
+                                <label class="form-label" for="form1Example2">
+                                  Contraseña
+                                </label>
+                            </div>
+                            <div id="input-phone-num" class="d-none">
+                                <span class="add">+</span><input id="country-code" class="input d-none"><input id="phone-number" class="input" name="phone-number" type="text" placeholder="Phone Number"/>
+                            </div>
+                            <div id="input-verify-code" class="d-none">
+                                <input id="verify-code" class="input" name="verify-code" type="text" placeholder="Verification Code"/><button id="get-code" class="button" disabled>Get Code</button>
+                            </div>
+                            <input name="clientMac" id="cMac" style="display:none"/>
+                            <input name="radiusSvrIp" id="radiusServerIp" style="display:none"/>
+                  <!-- PopOver si olvidaste la contraseña -->
+                        <div class="col text-center m-1 pb-4">
+                          <a href="#!" data-bs-toggle="popover" data-bs-placement="top" data-bs-trigger="focus" data-bs-content="Consulta la contraseña con el profesor mas cercano">Olvidaste la contraseña?</a>
+                        </div>
+                        </form>
+                        <div id="button-area" class="buttonPosition">
+                            <button id="button-facebook" class="button oper-section-item d-none" disabled>Facebook</button>
+                            <button id="button-login" class="button oper-section-item btn btn-success btn-lg">INGRESAR</button>
+                        </div>
+
+
+                <!-- fin de botones, es importante no modificarlo, si falta una funcion, el controlador no detecta la posicion de los botones-->
+                    </form>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+<!--Fin del Body-->
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+    <!--Script de Java para activar los PopUps en la pagina, desde bootstrap 5.0 que vienen desactivados por defecto--> 
+    <script type="text/javascript">
+    $(function () {
+        $("[rel='tooltip']").tooltip();
+    });
+    </script>
+    <script type="text/javascript">
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) 
+        {
+        return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+<!--Pagina de login por Pablo Benitez en colaboracion con VAIX-->
+</html>
