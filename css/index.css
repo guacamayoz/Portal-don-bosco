@@ -32,7 +32,6 @@ body.portal {
       @media (max-width: 992px) {
         #intro {
         background: url("../img/background2.png") 0% 0% / cover no-repeat;
-          height: 100vh
         }
       }
 .colorTexto
