@@ -18,19 +18,20 @@ body.portal {
     background: url("../img/background.png") 0% 0% / cover no-repeat;
 }
 #intro {
-        background: url("../img/background.png") 0% 0% / cover no-repeat;
         height: 100vh
       }
 
       /* Altura de Copyright para dispositivos con mas de 576px */
       @media (min-width: 992px) {
         #intro {
+        background: url("../img/background.png") 0% 0% / cover no-repeat;
           margin-top: -58.59px;
         }
       }
       /* Altura de Copyright para dispositivos con menos de 576px */
       @media (max-width: 992px) {
         #intro {
+        background: url("../img/background2.png") 0% 0% / cover no-repeat;
           height: 100vh
         }
       }
@@ -45,7 +46,7 @@ body.portal {
 .buttonPosition
 {
     position:relative;
-    bottom: 40px;
+    bottom: 42px;
 }
 .weightTexto
 {
